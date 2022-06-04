@@ -11,7 +11,11 @@ window.onload = () => {
             btn.addEventListener('click', function (event) {
                 const value = this.dataset.type;
                 if (value === 'increment') result = num++;
-                if (value === 'decrement') if (num > 1) result = num--;
+                if (value === 'decrement') {
+                    if (num > 1) {
+                        result = num--;
+                    }
+                }
 
                 result = (num < 10) ? `0${num}` : num;
                 number.textContent = result;
